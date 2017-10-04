@@ -1,11 +1,12 @@
-NormalParticle[] stars;
+Particle[] stars;
 void setup()
 {
 	size(500, 500);
-	stars = new NormalParticle[100];
+	stars = new Particle[100];
 	for(int i = 0; i < stars.length; i++)
 	{
 		stars[i] = new NormalParticle();
+		stars[0] = new OddballParticle();
 	}
 
 }
@@ -51,9 +52,9 @@ interface Particle
 }
 class OddballParticle implements Particle
 {
-int myColor;
+	int myColor;
 	double myX, myY, mySpeed, myAngle;
-	NormalParticle()
+	OddballParticle()
 	{
 		myX = 250;
 		myY = 250;
@@ -70,11 +71,11 @@ int myColor;
 	{
 		noStroke();
 		fill(myColor);
-		quad((float))
+		rect((float)myX, (float)myY, 30, 30);
 	}
 
 }
-class JumboParticle //uses inheritance
+class JumboParticle implements Particle
 {
 	//your code here
 }
