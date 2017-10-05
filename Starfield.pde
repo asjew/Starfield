@@ -2,7 +2,7 @@ Particle[] stars;
 void setup()
 {
   size(500, 500);
-  stars = new Particle[100];
+  stars = new Particle[500];
   for(int i = 0; i < stars.length; i++)
   {
     stars[i] = new NormalParticle();
@@ -77,6 +77,8 @@ class JumboParticle extends NormalParticle
   {
     noStroke();
     fill(myColor);
+    ellipse((float)myX - 25 ,(float)myY -23, 30, 30); //left ear
+    ellipse((float)myX + 25,(float)myY - 23, 30, 30); // right ear
     ellipse((float)myX,(float)myY, 50, 50);
   }
 }
