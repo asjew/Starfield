@@ -60,9 +60,20 @@ class OddballParticle extends NormalParticle
   }
   public void show()
   {
-    noStroke();
+    stroke(255);
     fill(myColor);
-    rect((float)myX, (float)myY, 30, 30);
+	rect((float)myX, (float)myY, 30, 30);
+	/*  beginShape();
+  vertex(25, 10);
+  vertex(18, 20);
+  vertex(32, 20);
+  endShape(CLOSE);
+  beginShape();
+  vertex(32, 20);
+  vertex(39, 20);
+  vertex(32, 30);
+  endShape();
+  */
   }
 
 }
